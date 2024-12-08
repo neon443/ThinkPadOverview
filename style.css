@@ -1,10 +1,14 @@
 * {
-	transition: 0.2s ease-in-out;
+	transition: transform 0.2s ease-in-out;
+}
+
+html {
+    background-color: #ffffff;
 }
 
 body {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
+    background-color: #f0f0f0;
+    color: #333333;
     font-family: system-ui;
     line-height: 1.6;
     margin: 0;
@@ -12,8 +16,8 @@ body {
 }
 
 header {
-    background: rgba(0, 0, 0, 0.75);
-    color: #ffffff;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000000;
     padding: 10px 20px;
     position: sticky;
     top: 0;
@@ -21,14 +25,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 h1 {
     font-size: 1.5em;
     margin: 0;
-    transition: font-size 0.3s ease;
 }
 
 h1:not(:first-child) {
@@ -36,13 +39,13 @@ h1:not(:first-child) {
 }
 
 h2 {
-    color: #00aaff;
-    margin: 10, 0;
-}
-
-h2 {
+    color: #007acc;
     margin: 0;
     margin-top: 10px;
+}
+
+#overview h2 {
+    margin-top: 0;
 }
 
 p {
@@ -64,7 +67,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #000000;
+    color: #007acc;
     text-decoration: none;
 }
 
@@ -84,12 +87,11 @@ nav ul li a {
     left: -100%;
     width: 250px;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(5px);
-    transition: left 0.3s ease;
     z-index: 1001;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-    border-right: 1px solid rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 #mobile-menu.open {
@@ -98,10 +100,9 @@ nav ul li a {
 }
 
 main {
-    background: #2a2a2a;
+    background: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin: 20px 2.5vw;
     max-width: 95vw;
     padding: 20px;
@@ -110,6 +111,7 @@ main {
 section {
     display: flex;
     flex-direction: column;
+    opacity: 0;
 }
 
 section > div {
@@ -129,8 +131,8 @@ section p {
 }
 
 .support-links {
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid black;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #cccccc;
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -139,22 +141,22 @@ section p {
 }
 
 .support-links a {
-    color: inherit;
+    color: #007acc;
     margin: 0px 20px;
     text-decoration: none;
 }
 
 footer {
     padding: 20px;
-    background: rgba(60, 60, 60, 0.6);
-    color: #ffffff;
+    background: rgba(240, 240, 240, 0.9);
+    color: #000000;
     position: relative;
     text-align: center;
     bottom: 0;
 }
 
 footer a {
-    color: #ffffff;
+    color: #007acc;
     text-decoration: none;
     text-decoration: underline;
 }
@@ -162,7 +164,56 @@ footer a {
 a:hover {
     transform: scale(1.2);
     font-weight: 600;
-    color: blue;
+    color: #005999;
+}
+
+@keyframes flyIn {
+    from {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.fly-in {
+    animation: flyIn 0.5s forwards;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+    }
+
+    footer {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #ffffff;
+    }
+
+    h2 {
+        color: #00aaff;
+    }
+
+    main {
+        background: #2a2a2a;
+    }
+    #menu-toggle {
+        color: #ffffff;
+    }
+    #mobile-menu a {
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .support-links {
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid #333333;
+    }
+    header {
+        background: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
 }
 
 @media (max-width: 768px) {
@@ -180,29 +231,8 @@ a:hover {
     #support-links {
         flex-direction: column;
     }
-}
 
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #1e1e1e;
-        color: #e0e0e0;
-    }
-
-    footer {
-        color: #ffffff;
-    }
-
-    h2 {
-        color: #00aaff;
-    }
-
-    main {
-        background: #2a2a2a;
-    }
-    #menu-toggle {
-        color: #ffffff;
-    }
-    #mobile-menu a {
-        color: rgba(255, 255, 255, 0.8);
+    section img {
+        max-width: 60vw;
     }
 }
