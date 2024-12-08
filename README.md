@@ -7,8 +7,8 @@ This website was created because I like ThinkPads and wanted to make a dedicated
 ## Styling
 Dark Mode
 Link hover animations!
+Mobile friendly UI
 Coming soon:
-Mobile freindly UI
 Loading animation
 
 ## Contributing

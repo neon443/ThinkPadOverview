@@ -5,11 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>ThinkPad Overview</title>
 		<link rel="stylesheet" href="style.css">
+		<script src="script.js" defer></script>
 	</head>
 	<body>
     <header>
         <h1>ThinkPad Overview</h1>
-        <nav>
+        <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+        <nav id="mobile-menu">
             <ul>
                 <li><a href="#overview">Overview</a></li>
                 <li><a href="#features">Features</a></li>
@@ -24,22 +26,22 @@
         </nav>
     </header>
     <main>
-        <section id="Overview">
+        <section id="overview">
             <h2>Overview</h2>
             <p>ThinkPads are business-grade laptops with a focus on durability and upgradability, even though some recent models have components like RAM soldered onto the motherboard</p>
 			<p>They are known for excellent keyboards, long battery life, and excellent build quality.</p>
-			<p>Due to their business focus, they typically perform better than regular consumer and even prosumer laptops in the same price ranges<p>
+			<p>Due to their business focus, they typically perform better than regular consumer and even prosumer laptops in the same price ranges</p>
         </section>
         <section id="features">
             <h2>Why ThinkPad</h2>
             <ul>
-				<li>TrackPoint: The red nub on the keyboard is great for using the cursor without moving your hands aeay from the keyboard</li>
+				<li>TrackPoint: The red nub on the keyboard is great for using the cursor without moving your hands away from the keyboard</li>
 				<li>Spill-resistant keyboard</li>
 				<li>Excellent keyboard</li>
 				<li>High Endurance</li>
 				<li>Older models have indicator LEDs</li>
-				<li>Upgradability: Almost every model has Hardware Maintainence Manuals avaliable</li>
-				<li>Linux: ThinkPads have good linux compatibility, great for people who are fed up with windows.</li>
+				<li>Upgradability: Almost every model has Hardware Maintenance Manuals available</li>
+				<li>Linux: ThinkPads have good Linux compatibility, great for people who are fed up with Windows.</li>
             </ul>
         </section>
 		<section>
@@ -47,7 +49,7 @@
 			<p>Format: letter number number number letter</p>
 			<p><strong>T</strong>: Thin 14-15" Medium sized laptop</p>
 			<p><strong>X</strong>: More portable T series, with 12-13" screens, with the loss of some upgradability</p>
-			<p><strong>W</strong>: Portable workstations; these have increased thickness for gains in CPU and GPU. These ususally have more room for upgradability</p>
+			<p><strong>W</strong>: Portable workstations; these have increased thickness for gains in CPU and GPU. These usually have more room for upgradability</p>
 			<p><strong>P</strong>: Current workstation line. Main difference is that they are thinner</p>
 			<p><strong>X1</strong>: Modern flagships, thin and relatively powerful, around the MacBook Air</p>
 			<p><strong>X1 Extreme</strong>: Much more powerful, similar to the MacBook Pro. They have much better performance and have a great balance of power, weight and durability, however a slight loss of battery life is the tradeoff</p>
@@ -93,9 +95,9 @@
             <h2>Support and Resources</h2>
             <p>For any questions or concerns about your ThinkPad, you can visit the official Lenovo support website for documentation, drivers, and troubleshooting guides.</p>
             <div class="support-links">
-                <a href="https://support.lenovo.com"><i class="fas fa-home"></i> Lenovo Support Website</a>
-                <a href="https://www.reddit.com/r/thinkpad"><i class="fab fa-reddit"></i> ThinkPad Subreddit</a>
-                <a href="https://www.thinkpads.com"><i class="fas fa-comments"></i> ThinkPads.com Forum</a>
+                <a href="https://support.lenovo.com"><i class="fas fa-home"></i>Lenovo Support</a>
+                <a href="https://www.reddit.com/r/thinkpad"><i class="fab fa-reddit"></i>r/ThinkPad</a>
+                <a href="https://www.thinkpads.com"><i class="fas fa-comments"></i>ThinkPads.com Forum</a>
             </div>
         </section>
     </main>
