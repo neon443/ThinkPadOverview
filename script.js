@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 	const menuToggle = document.getElementById('menu-toggle');
-	const mobileMenu = document.getElementById('mobile-menu');
+	const mobileMenu = document.getElementById('menu');
 	const sections = document.querySelectorAll('section');
+	const navLinks = document.querySelectorAll('nav ul li a');
 
 	menuToggle.addEventListener('click', function() {
 		console.log('menu toggle clicked');

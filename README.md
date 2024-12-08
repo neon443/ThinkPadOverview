@@ -4,11 +4,10 @@
 
 This website was created because I like ThinkPads and wanted to make a dedicated webpage about them, while also practicing my webdev skills.
 
-## Styling
+## Features
 Dark Mode
-Link hover animations!
-Mobile friendly UI
-Coming soon:
+Link hover animations
+Mobile friendly UI with a hamburger menu
 Loading animation
 
 ## Contributing
